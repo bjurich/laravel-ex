@@ -81,9 +81,11 @@
     <script type="text/javascript" src="bower_components/angular/angular.js"></script>
     <script type="text/javascript" src="bower_components/ng-table-bundle/ng-table.js"></script>
     <script type="text/javascript" src="bower_components/restangular/dist/restangular.js"></script>
+    <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 
     <!-- Application Scripts -->
     <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/user-administration.js"></script>
     {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
 </body>
 </html>
