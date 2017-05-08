@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="crm">
+<html ng-app="bj">
 <head>
     <title>BJ</title>
 
