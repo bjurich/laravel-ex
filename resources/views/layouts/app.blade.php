@@ -71,7 +71,9 @@
             </div>
         </div>
     </nav>
-
+    <div style="padding: 50px 15px 0 15px;">
+        <div ui-view></div>
+    </div>
     @yield('content')
 
     <!-- JavaScripts -->
