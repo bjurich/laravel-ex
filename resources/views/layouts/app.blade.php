@@ -80,6 +80,7 @@
     <!-- Application Dependencies -->
     <script type="text/javascript" src="bower_components/angular/angular.js"></script>
     <script type="text/javascript" src="bower_components/ng-table-bundle/ng-table.js"></script>
+    <script type="text/javascript" src="bower_components/restangular/dist/restangular.js"></script>
 
     <!-- Application Scripts -->
     <script type="text/javascript" src="js/app.js"></script>
