@@ -47,7 +47,11 @@
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/home') }}">Home</a></li>
+                    @if (Auth::guest())
+                        <li><a href="{{ url('/home') }}">Home</a></li>
+                    @else
+                        <li><a ui-sref="main.users" ui-sref-opts="{reload: true}">Users</a></li>
+                    @endif
                 </ul>
 
                 <!-- Right Side Of Navbar -->
@@ -71,9 +75,6 @@
             </div>
         </div>
     </nav>
-    <div style="padding: 50px 15px 0 15px;">
-        <div ui-view></div>
-    </div>
     @yield('content')
 
     <!-- JavaScripts -->
