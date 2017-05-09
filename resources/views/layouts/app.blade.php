@@ -30,7 +30,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <!-- Application Dependencies -->
     <script type="text/javascript" src="bower_components/angular/angular.js"></script>
-    <script type="text/javascript" src="bower_components/ng-table-bundle/ng-table.js"></script>
+    <script type="text/javascript" src="bower_components/ng-table/dist/ng-table.js"></script>
     <script type="text/javascript" src="bower_components/lodash/dist/lodash.js"></script>
     <script type="text/javascript" src="bower_components/restangular/dist/restangular.js"></script>
     <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
