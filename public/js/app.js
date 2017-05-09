@@ -2,6 +2,10 @@ var bj = angular.module('bj', [
   'ui.router', 'ngTable', 'restangular', 'bj.userAdministration'
 ]);
 
+bj.config(function (RestangularProvider) {
+  RestangularProvider.setBaseUrl('http://laravel-mysql-persistent-bj.1d35.starter-us-east-1.openshiftapps.com/');
+});
+
 bj.config(function($stateProvider) {
   var helloState = {
     name: 'administration',
