@@ -1,9 +1,5 @@
 <html>
 <head>
-    <script src="lib/angular.js"></script>
-    <script src="lib/angular-ui-router.js"></script>
-    <script src="helloworld.js"></script>
-
     <script type="text/javascript" src="bower_components/angular/angular.js"></script>
     <script type="text/javascript" src="bower_components/ng-table-bundle/ng-table.js"></script>
     <!--script type="text/javascript" src="bower_components/restangular/dist/restangular.js"></script-->
