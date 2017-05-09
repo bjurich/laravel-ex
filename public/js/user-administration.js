@@ -4,55 +4,21 @@ var userAdministration = angular.module('bj.userAdministration', [
 
 userAdministration.controller('UsersCtrl', function ($scope, NgTableParams, Restangular) {
   $scope.ngTable = new NgTableParams({count: 10}, {
-    getData: function($defer, params) {
-      Restangular.all('users').customGET(null, {page: params.page() - 1, size: params.count()})
+    getData: function(params) {
+      Restangular.all('users').customGET(null, {})
         .then(
           function (data) {
-            params.total(data.totalElements);
-            $defer.resolve(data.content);
+            console.log('dddd', data);
+            //params.total(data.totalElements);
+            return data.content;
           },
           function (err) {
             console.error(err);
             params.total(0);
-            $defer.resolve([]);
+            return [];
           }
         );
     }
   });
 
-});
-
-userAdministration.controller('UserEditCtrl', function ($scope, user, roles, $state, Restangular) {
-  $scope.user = user;
-
-  $scope.user.groups = [];
-
-  $scope.roles = roles.content;
-
-  $scope.saveUser = function() {
-
-    var promise = null;
-
-    var u = $scope.user;
-
-    if ('id' in u) {
-      promise = Restangular
-        .one('users')
-        .customPUT(u, u.username)
-        .then(function(){
-          console.log('PUT');
-        });
-    } else {
-      promise = Restangular
-        .one('users')
-        .customPOST(u)
-        .then(function() {
-            console.log('PUT');
-        });
-    }
-
-    promise.then(function() {
-      $state.go('main.editUser', {username: u.username});
-    });
-  };
 });

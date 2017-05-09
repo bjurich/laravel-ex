@@ -2,9 +2,27 @@ var bj = angular.module('bj', [
   'ui.router', 'ngTable', 'restangular', 'bj.userAdministration'
 ]);
 
+
+
 bj.config(function (RestangularProvider) {
-  RestangularProvider.setBaseUrl('http://laravel-mysql-persistent-bj.1d35.starter-us-east-1.openshiftapps.com/');
+  RestangularProvider.setBaseUrl('/');
+
+  // For Django
+  RestangularProvider.setRequestSuffix('/');
+
+  RestangularProvider.addFullRequestInterceptor(function (element, operation, route, url, headers, params, httpConfig) {
+    // For some reason dates sent as HTTP query parameters are quoted
+    // This makes sure they are no longer quoted and are formatted properly
+    console.log('intercepting');
+    return {
+      element: element,
+      params: params,
+      headers: headers,
+      httpConfig: httpConfig
+    };
+  });
 });
+
 
 bj.config(function($stateProvider) {
   var helloState = {
