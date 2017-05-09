@@ -2,16 +2,6 @@ var userAdministration = angular.module('bj.userAdministration', [
   'ngTable'
 ]);
 
-userAdministration.config(function ($stateProvider) {
-  $stateProvider
-    .state('main.users', {
-      url: 'admin/users',
-      authenticated: true,
-      templateUrl: '/js/admin/users.tpl.html',
-      controller: 'UsersCtrl'
-    })
-});
-
 userAdministration.controller('UsersCtrl', function ($scope, ngTableParams, Restangular) {
   $scope.ngTable = new ngTableParams({count: 10}, {
     getData: function($defer, params) {
