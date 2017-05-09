@@ -24,9 +24,23 @@
             margin-right: 6px;
         }
     </style>
+
+    <!-- JavaScripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" integrity="sha384-I6F5OKECLVtK/BL+8iSLDEHowSAfUo76ZL9+kGAgTRdiByINKJaqTPH/QVNS1VDb" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <!-- Application Dependencies -->
+    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="bower_components/ng-table-bundle/ng-table.js"></script>
+    <script type="text/javascript" src="bower_components/restangular/dist/restangular.js"></script>
+    <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+
+    <!-- Application Scripts -->
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/user-administration.js"></script>
+    {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
 </head>
 
-<body id="app-layout">
+<body ng-app="bj" id="app-layout">
     <nav class="navbar navbar-default navbar-static-top">
         <div class="container">
             <div class="navbar-header">
@@ -80,19 +94,5 @@
     </nav>
     <ui-view></ui-view>
     @yield('content')
-
-    <!-- JavaScripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" integrity="sha384-I6F5OKECLVtK/BL+8iSLDEHowSAfUo76ZL9+kGAgTRdiByINKJaqTPH/QVNS1VDb" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    <!-- Application Dependencies -->
-    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
-    <script type="text/javascript" src="bower_components/ng-table-bundle/ng-table.js"></script>
-    <script type="text/javascript" src="bower_components/restangular/dist/restangular.js"></script>
-    <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-
-    <!-- Application Scripts -->
-    <script type="text/javascript" src="js/app.js"></script>
-    <script type="text/javascript" src="js/user-administration.js"></script>
-    {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
 </body>
 </html>
