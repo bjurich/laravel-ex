@@ -31,6 +31,7 @@
     <!-- Application Dependencies -->
     <script type="text/javascript" src="bower_components/angular/angular.js"></script>
     <script type="text/javascript" src="bower_components/ng-table-bundle/ng-table.js"></script>
+    <script type="text/javascript" src="bower_components/lodash/dist/lodash.js"></script>
     <script type="text/javascript" src="bower_components/restangular/dist/restangular.js"></script>
     <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 
