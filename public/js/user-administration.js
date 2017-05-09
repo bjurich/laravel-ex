@@ -2,8 +2,8 @@ var userAdministration = angular.module('bj.userAdministration', [
   'ngTable'
 ]);
 
-userAdministration.controller('UsersCtrl', function ($scope, ngTableParams, Restangular) {
-  $scope.ngTable = new ngTableParams({count: 10}, {
+userAdministration.controller('UsersCtrl', function ($scope, NgTableParams, Restangular) {
+  $scope.ngTable = new NgTableParams({count: 10}, {
     getData: function($defer, params) {
       Restangular.all('users').customGET(null, {page: params.page() - 1, size: params.count()})
         .then(
