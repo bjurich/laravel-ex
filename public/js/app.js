@@ -1,5 +1,5 @@
 var bj = angular.module('bj', [
-  'ui.router', 'bj.userAdministration'
+  'ui.router', 'ngTable', 'restangular', 'bj.userAdministration'
 ]);
 
 bj.config(function($stateProvider) {
