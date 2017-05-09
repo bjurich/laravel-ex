@@ -1,5 +1,5 @@
 var bj = angular.module('bj', [
-  'ui.router'
+  'ui.router', 'bj.userAdmnistration'
 ]);
 
 bj.config(function($stateProvider) {
