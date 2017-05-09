@@ -9,7 +9,7 @@ bj.config(function (RestangularProvider) {
 
   // For Django
   RestangularProvider.setRequestSuffix('/');
-
+/*
   RestangularProvider.addFullRequestInterceptor(function (element, operation, route, url, headers, params, httpConfig) {
     // For some reason dates sent as HTTP query parameters are quoted
     // This makes sure they are no longer quoted and are formatted properly
@@ -20,7 +20,7 @@ bj.config(function (RestangularProvider) {
       headers: headers,
       httpConfig: httpConfig
     };
-  });
+  });*/
 });
 
 
