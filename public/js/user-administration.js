@@ -4,18 +4,18 @@ var userAdministration = angular.module('bj.userAdministration', [
 
 userAdministration.controller('UsersCtrl', function ($scope, NgTableParams, Restangular) {
   $scope.ngTable = new NgTableParams({count: 10}, {
-    getData: function(params) {
+    getData: function($defer, params) {
       Restangular.all('users').customGET(null, {})
         .then(
           function (data) {
             console.log('dddd', data);
             params.total(data.total);
-            return data.data;
+            $defer.resolve(data.data);
           },
           function (err) {
             console.error(err);
             params.total(0);
-            return [];
+            $defer.resolve([]);
           }
         );
     }
