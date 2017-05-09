@@ -4,8 +4,8 @@ var bj = angular.module('bj', [
 
 bj.config(function($stateProvider) {
   var helloState = {
-    name: 'main.users',
-    url: '/admin/users',
+    name: 'administration',
+    url: '/administration',
     authenticated: true,
     templateUrl: '/js/admin/users.tpl.html',
     controller: 'UsersCtrl'
