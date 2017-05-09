@@ -9,7 +9,7 @@
     <style>.active { color: red; font-weight: bold; }</style>
 </head>
 
-<body ng-app="helloworld">
+<body ng-app="bj">
 <a ui-sref="hello" ui-sref-active="active">Hello</a>
 <a ui-sref="about" ui-sref-active="active">About</a>
 
