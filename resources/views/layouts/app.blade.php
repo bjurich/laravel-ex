@@ -75,6 +75,7 @@
             </div>
         </div>
     </nav>
+    <ui-view></ui-view>
     @yield('content')
 
     <!-- JavaScripts -->
@@ -90,9 +91,5 @@
     <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript" src="js/user-administration.js"></script>
     {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
-
-    <div style="padding: 50px 15px 0 15px;">
-        <div ui-view></div>
-    </div>
 </body>
 </html>
