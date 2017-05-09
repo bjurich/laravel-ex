@@ -4,9 +4,11 @@ var bj = angular.module('bj', [
 
 bj.config(function($stateProvider) {
   var helloState = {
-    name: 'hello',
-    url: '/hello',
-    template: '<h3>hello world!</h3>'
+    name: 'main.users',
+    url: '/admin/users',
+    authenticated: true,
+    templateUrl: '/js/admin/users.tpl.html',
+    controller: 'UsersCtrl'
   }
 
   var aboutState = {
