@@ -66,7 +66,7 @@
                         <li><a href="{{ url('/home') }}">Home</a></li>
                     @else
                         <!--li><a ui-sref="main.users" ui-sref-opts="{reload: true}">Users</a-->
-                        <li><a ui-sref="hello" ui-sref-active="active">Users</a></li>
+                        <li><a ui-sref="main.users" ui-sref-active="active">Users</a></li>
                         <li><a ui-sref="about" ui-sref-active="active">Roles</a></li>
                     @endif
                 </ul>
