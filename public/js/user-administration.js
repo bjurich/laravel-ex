@@ -9,8 +9,8 @@ userAdministration.controller('UsersCtrl', function ($scope, NgTableParams, Rest
         .then(
           function (data) {
             console.log('dddd', data);
-            //params.total(data.totalElements);
-            return data.content;
+            params.total(data.total);
+            return data.data;
           },
           function (err) {
             console.error(err);
